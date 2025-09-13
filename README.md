@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LocalGuide AI
 
-## Getting Started
+LocalGuide AI is a web application that lets users interact with a **local LLM** (Ollama) to find places to go, eat, or visit. The app provides results via **Google Maps**, allowing users to view directions on an embedded map or open the location in Google Maps.
 
-First, run the development server:
+---
+
+## Features
+
+- **Full-Stack Next.js:** Both frontend and backend handled with Next.js.  
+- **Local LLM Integration:** Uses Ollama to process user prompts and return location-based suggestions.  
+- **Google Maps Integration:** Displays results on an embedded map with clickable directions.  
+- **Secure API Usage:** Handles API keys safely and implements usage limits.  
+- **Modern UI:** Responsive and clean interface using Tailwind CSS.
+
+---
+
+## Tech Stack
+
+- **Frontend:** Next.js + TypeScript + Tailwind CSS  
+- **Backend:** Next.js API routes (TypeScript)  
+- **LLM:** Ollama (local model)  
+- **Maps:** Google Maps API  
+
+---
+
+## Installation
+
+### 1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/miftakhussalam/LocalGuide.git
+cd LocalGuide
+```
+### 2. install dependencies:
+
+```bash
+yarn install || bun install || npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Create a `.env.local` file with your API keys:
+```.env
+GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+OLLAMA_API_URL=http://localhost:11434
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 4. Run the development server:
+```bash
+yarn dev || bun run dev || npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
