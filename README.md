@@ -39,7 +39,7 @@ yarn install || bun install || npm install
 
 ### 3. Create a `.env.local` file with your API keys:
 ```.env
-GOOGLE_MAPS_API_KEY=your_google_maps_api_key
+GOOGLE_API_KEY=your_google_maps_api_key
 OLLAMA_API_URL=http://localhost:11434
 ```
 
